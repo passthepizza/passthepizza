@@ -1,4 +1,4 @@
-![audio](https://github.com/passthepizza/passthepizza/raw/main/preview_HighWarm%20(2).mp3)
+![shadow](https://github.com/passthepizza/passthepizza/blob/main/yes.gif?raw=true)
 
 ```math
 \ce{

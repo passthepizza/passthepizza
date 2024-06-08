@@ -19,46 +19,6 @@
         background-attachment: fixed;
     ]{x0000}$
 
-    <style>
-        #dvd-logo {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/6/66/DVD_logo.svg') no-repeat center center;
-            background-size: contain;
-            z-index: 1000;
-        }
-    </style>
-
-    <div id="dvd-logo"></div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var dvdLogo = document.getElementById('dvd-logo');
-            var x = Math.random() * (window.innerWidth - 100);
-            var y = Math.random() * (window.innerHeight - 100);
-            var dx = 2;
-            var dy = 2;
-
-            function moveLogo() {
-                x += dx;
-                y += dy;
-
-                if (x <= 0 || x >= window.innerWidth - 100) {
-                    dx = -dx;
-                }
-
-                if (y <= 0 || y >= window.innerHeight - 100) {
-                    dy = -dy;
-                }
-
-                dvdLogo.style.left = x + 'px';
-                dvdLogo.style.top = y + 'px';
-
-                requestAnimationFrame(moveLogo);
-            }
-
-            moveLogo();
-        });
-    </script>
+ \ce{%
+$html{<style>@keyframes bounce-around { 0% { top: 0; left: 0; } 25% { top: 0; left: calc(100\% - var(--logo-size)); } 50% { top: calc(100\% - var(--logo-size)); left: calc(100\% - var(--logo-size)); } 75% { top: calc(100\% - var(--logo-size)); left: 0; } 100% { top: 0; left: 0; } } #dvd-logo { --logo-size: 80px; position: fixed; width: var(--logo-size); height: var(--logo-size); background-size: contain; background-repeat: no-repeat; background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/07/DVD_video_logo.png'); animation: bounce-around 5s linear infinite; } </style> <div id="dvd-logo"></div>}%
 }
